@@ -37,3 +37,4 @@ if __name__ == '__main__':
     app.run(host=host, port=port, threaded=True)
     #getenv returns a string and port is an int
     #threaded is set to true so it can serve multiple request at once
+    
