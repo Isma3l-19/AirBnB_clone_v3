@@ -17,6 +17,7 @@ app.register_blueprint(app_views)
 #Initializing CORS with the app instance
 CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
 
+
 #Declaring a method to handle teardown
 @app.teardown_appcontext
 def teardown(exception):
@@ -28,6 +29,7 @@ def teardown(exception):
 def not_found(error):
     """Handles the 404 not found error"""
     return({'error': 'Not found'}), 404
+
 
 if __name__ == '__main__':
     host = os.getenv('HBNB_API_HOST', '0.0.0.0')
